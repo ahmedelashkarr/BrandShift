@@ -54,7 +54,7 @@ export default function Footer() {
                     <div className="col-12 col-md-4">
                         <div className="d-flex justify-content-center justify-content-md-end gap-4">
                             <a 
-                                href="https://instagram.com" 
+                                href="https://www.instagram.com/brandshiftt/" 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 className="text-tertiary icon-hover text-decoration-none d-flex align-items-center justify-content-center rounded-circle" 
