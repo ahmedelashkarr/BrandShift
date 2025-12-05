@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import LearningHub_ar from "/public/assets/LearningHub-ar.jpg";
 
 export default function Portfolio() {
     const { t } = useTranslation()
@@ -41,8 +42,8 @@ export default function Portfolio() {
     const portfolioItems = [
         {
             images: {
-                ar: "/public/assets/LearningHub-ar.jpg",
-                en: "/public/assets/LearningHub-en.jpg"
+                ar: LearningHub_ar,
+                en: "../../public/assets/LearningHub-en.jpg"
             },
             title: "Learning Hub",
             category: "Academy"
