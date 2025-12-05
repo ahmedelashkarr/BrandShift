@@ -5,9 +5,7 @@
     text-align: right;
 }
 
-[dir="rtl"] .logo-container {
-    flex-direction: row-reverse;
-}
+
 
 [dir="rtl"] .d-flex {
     flex-direction: row-reverse;
@@ -148,3 +146,10 @@
 [dir="rtl"] .gap-4 { gap: 1.5rem !important; }
 [dir="rtl"] .gap-5 { gap: 3rem !important; }
 
+[dir="rtl"] .d-flex.align-items-center.mb-3{
+    display: flex !important;
+        justify-content: space-between;
+}
+[dir="rtl"] .text-tertiary.mb-0 {
+    text-align: right;
+}

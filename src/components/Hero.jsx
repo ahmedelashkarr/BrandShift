@@ -42,31 +42,31 @@ export default function Hero() {
         <section className="position-relative py-5 overflow-hidden" style={{ paddingTop: '140px', minHeight: '90vh', display: 'flex', alignItems: 'center' }}>
             {/* Animated Background */}
             <div className="animated-bg"></div>
-            
+
             {/* Decorative Elements */}
             <div className="decorative-circle" style={{ width: '300px', height: '300px', top: '10%', right: '5%', opacity: 0.3 }}></div>
             <div className="decorative-blob" style={{ width: '250px', height: '250px', bottom: '15%', left: '5%', opacity: 0.2 }}></div>
             <div className="decorative-circle" style={{ width: '200px', height: '200px', top: '50%', left: '10%', opacity: 0.25, animationDelay: '1s' }}></div>
-            
+
             {/* Gradient Overlay */}
-            <div className="gradient-overlay" style={{background:"linear-gradient(135deg, rgb(195 79 0 / 10%) 0%, rgb(255 106 0 / 5%) 100%)"}}></div>
+            <div className="gradient-overlay" style={{ background: "linear-gradient(135deg, rgb(195 79 0 / 10%) 0%, rgb(255 106 0 / 5%) 100%)" }}></div>
 
             <div className="container position-relative" style={{ zIndex: 1 }}>
                 <div className="row justify-content-center">
                     <div className="col-12 col-lg-10 text-center">
                         <div className="logo-container justify-content-center mb-4 scroll-animate">
-                            <img 
-                                src="/assets/headerLogo.png" 
-                                alt="BrandShift Logo" 
-                                className="logo-image logo-image-large animate-float" 
+                            <img
+                                src="/assets/headerLogo.png"
+                                alt="BrandShift Logo"
+                                className="logo-image logo-image-large animate-float"
                             />
                             <span className="display-4 fw-bold text-primary-custom animate-zoom-in">BrandShift</span>
                         </div>
                         <h1 className="display-2 display-md-1 fw-bold mb-4 lh-base text-primary-custom scroll-animate animate-delay-1">
                             {t('hero.title')} <span className="orange-accent position-relative">
                                 {t('hero.titleHighlight')}
-                                <span className="position-absolute bottom-0 start-0 w-100" style={{ 
-                                    height: '4px', 
+                                <span className="position-absolute bottom-0 start-0 w-100 d-block" style={{
+                                    height: '4px',
                                     background: 'linear-gradient(90deg, var(--orange-accent), transparent)',
                                     animation: 'shimmer 2s infinite'
                                 }}></span>
@@ -76,16 +76,16 @@ export default function Hero() {
                             {t('hero.subtitle')}
                         </p>
                         <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center scroll-animate animate-delay-3">
-                            <a 
-                                href="#contact" 
-                                onClick={(e) => handleSmoothScroll(e, '#contact')} 
+                            <a
+                                href="#contact"
+                                onClick={(e) => handleSmoothScroll(e, '#contact')}
                                 className="btn btn-primary-custom btn-lg px-5 py-3 rounded-pill shadow-lg btn-enhanced hover-lift"
                             >
                                 {t('hero.getStarted')}
                             </a>
-                            <a 
-                                href="#services" 
-                                onClick={(e) => handleSmoothScroll(e, '#services')} 
+                            <a
+                                href="#services"
+                                onClick={(e) => handleSmoothScroll(e, '#services')}
                                 className="btn btn-outline-custom btn-lg px-5 py-3 rounded-pill btn-enhanced hover-lift"
                             >
                                 {t('hero.ourServices')}

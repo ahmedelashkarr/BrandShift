@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import emailjs from '@emailjs/browser'
+import ContactForm from './ContactForm'
 
 export default function Contact() {
     const { t } = useTranslation()
@@ -40,9 +41,9 @@ export default function Contact() {
     const EMAILJS_SERVICE_ID = "service_43qfybg" // ✅ Already configured
     const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID" // ⚠️ REPLACE THIS - Create template and copy ID
 
-    const isConfigured = EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY" && 
-                        EMAILJS_SERVICE_ID !== "YOUR_SERVICE_ID" && 
-                        EMAILJS_TEMPLATE_ID !== "YOUR_TEMPLATE_ID"
+    const isConfigured = EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY" &&
+        EMAILJS_SERVICE_ID !== "YOUR_SERVICE_ID" &&
+        EMAILJS_TEMPLATE_ID !== "YOUR_TEMPLATE_ID"
 
     const handleChange = (e) => {
         setFormData({
@@ -78,7 +79,7 @@ export default function Contact() {
 
         try {
             const response = await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
-            
+
             setFormMessage({
                 text: t('contact.success'),
                 type: 'success'
@@ -86,7 +87,7 @@ export default function Contact() {
             setFormData({ name: '', business: '', whatsapp: '', message: '' })
         } catch (error) {
             let errorMessage = t('contact.error') + ' '
-            
+
             if (error.text) {
                 if (error.text.includes('Invalid public key')) {
                     errorMessage += t('contact.errorPublicKey')
@@ -100,7 +101,7 @@ export default function Contact() {
             } else {
                 errorMessage += t('contact.errorRetry')
             }
-            
+
             setFormMessage({
                 text: errorMessage,
                 type: 'error'
@@ -140,7 +141,7 @@ export default function Contact() {
                             <div className="section-divider"></div>
                         </div>
                         <div className="card card-enhanced card-bg p-4 p-md-5 rounded-4 shadow-lg border-0 scroll-animate animate-delay-1">
-                            <form onSubmit={handleSubmit}>
+                            {/* <form onSubmit={handleSubmit}>
                                 {formMessage.text && (
                                     <div className={getMessageClassName()} role="alert">
                                         {formMessage.text}
@@ -234,7 +235,8 @@ export default function Contact() {
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            </form> */}
+                            <ContactForm></ContactForm>
                         </div>
                     </div>
                 </div>

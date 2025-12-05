@@ -5,10 +5,13 @@ import './i18n'
 import './styles.css'
 import './styles/animations.css'
 import './styles/rtl.css'
+import { FormspreeProvider } from "@formspree/react";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <FormspreeProvider>
+      <App />
+    </FormspreeProvider>
   </React.StrictMode>,
 )
 
